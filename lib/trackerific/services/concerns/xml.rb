@@ -11,13 +11,13 @@ module Trackerific::Services::Concerns::XML
     def configure(&block)
       super
       base_uri(config.base_uri)
-      puts config.base_uri
     end
   end
 
   protected
 
   def request(id)
+    puts config.base_uri
     self.class.post(config.endpoint, body: builder(id).xml)
   end
 end
