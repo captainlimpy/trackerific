@@ -17,6 +17,7 @@ module Trackerific::Services::Concerns::XML
   protected
 
   def request(id)
+    puts config.endpoint
     self.class.post(config.endpoint, body: builder(id).xml)
   end
 end
