@@ -7,7 +7,7 @@ class Trackerific::Services::UPS < Trackerific::Services::Base
     config.builder = Trackerific::Builders::UPS
     config.package_id_matchers = [ /^.Z/, /^[HK].{10}$/ ]
     config.base_uri = case Trackerific.env
-    when 'production' then 'https://www.ups.com/ups.app/xml'
+    when 'production' then 'https://onlinetools.ups.com/'
     else 'https://wwwcie.ups.com/ups.app/xml'
     end
   end
